@@ -4,9 +4,11 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
-let computerChoice = console.log('The computer chose ' + getComputerChoice());
+const computerChoice = getComputerChoice();
+console.log('The computer chose ' + computerChoice);
 
 function round (playerSelection, computerSelection) {
+    console.log('You chose ' + playerSelection);
     if (playerSelection == computerSelection) {
         console.log('It is a tie! You and the computer both chose ' + computerChoice);
     } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
@@ -20,3 +22,7 @@ function round (playerSelection, computerSelection) {
     }
 
 }
+
+const playerChoice = prompt('Rock, Paper, or Scissors?').toLowerCase();
+
+round(playerChoice, computerChoice);
