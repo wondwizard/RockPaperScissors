@@ -15,6 +15,8 @@ window.onload = function() {
     const paper = document.getElementById('paper');
     const scissors = document.getElementById('scissors');
 
+    const compChoice = document.getElementById('computerChoice');
+
     const winner = document.getElementById('finalResult');
     const message = document.getElementById('message');
 
@@ -22,18 +24,23 @@ window.onload = function() {
         if (playerSelection == computerSelection) {
             playerScoreNum = playerScoreNum;
             computerScoreNum = computerScoreNum;
+            compChoice.textContent = 'The computer chose ' + computerSelection; 
         } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
             playerScoreNum++;
             playerScore.textContent = 'Player Score: ' + playerScoreNum;
+            compChoice.textContent = 'The computer chose ' + computerSelection; 
         } else if (playerSelection == 'paper' && computerSelection == 'rock') {
             playerScoreNum++;
             playerScore.textContent = 'Player Score: ' + playerScoreNum;
+            compChoice.textContent = 'The computer chose ' + computerSelection; 
         } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
             playerScoreNum++;
             playerScore.textContent = 'Player Score: ' + playerScoreNum;
+            compChoice.textContent = 'The computer chose ' + computerSelection; 
         } else {
             computerScoreNum++;
             computerScore.textContent = 'Computer Score: ' + computerScoreNum;
+            compChoice.textContent = 'The computer chose ' + computerSelection; 
         }
     
     }
