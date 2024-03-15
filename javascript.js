@@ -49,14 +49,22 @@ window.onload = function() {
         if (playerScoreNum === 5 || computerScoreNum === 5) {
             if (playerScoreNum > computerScoreNum) {
                 winner.textContent = 'You win!';
-                message.textContent = 'You had ' + playerScoreNum + ' points and the computer had ' + computerScoreNum + ' points';
+                if (computerScoreNum === 1) {
+                    message.textContent = 'You had ' + playerScoreNum + ' points, Computer had ' + computerScoreNum + ' point';
+                } else {
+                    message.textContent = 'You had ' + playerScoreNum + ' points, Computer had ' + computerScoreNum + ' points';
+                }
                 playerScoreNum = 0;
                 computerScoreNum = 0;
                 playerScore.textContent = 'Player Score: 0';
                 computerScore.textContent = 'Computer Score: 0';
             } else {
                 winner.textContent = 'Sorry the computer won :(';
-                message.textContent = 'You had ' + playerScoreNum + ' points and the computer had ' + computerScoreNum + ' points';
+                if (playerScoreNum === 1) {
+                    message.textContent = 'You had ' + playerScoreNum + ' point, Computer had ' + computerScoreNum + ' points';
+                } else {
+                    message.textContent = 'You had ' + playerScoreNum + ' points, Computer had ' + computerScoreNum + ' points';
+                }
                 playerScoreNum = 0;
                 playerScoreNum = 0;
                 computerScoreNum = 0;
